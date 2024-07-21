@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
+    </style>
+    <script src="script.js" defer></script>
+    <title>PianoElectronicov2</title>
+  </head>
+  <body>
+    <header>
+      <nav>Nav</nav>
+    </header>
+    <main>
+      <section class="wrapper">
+        <div class="volume-slider">
+          <img
+            class="IconoVol"
+            src="img/volume_up_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg"
+            alt="vol"
+          />
+          <input
+            class="vs"
+            id="volumeSlider"
+            type="range"
+            min="0"
+            max="1"
+            value="0.5"
+            step="any"
+          />
+        </div>
+        <button class="button" id="II">I / II</button>
+        <ul class="piano">
+          <li class="key white-key" data-key="C"></li>
+          <li class="key black-key" data-key="C#"></li>
+          <li class="key white-key" data-key="D"></li>
+          <li class="key black-key" data-key="D#"></li>
+          <li class="key white-key" data-key="E"></li>
+          <li class="key white-key" data-key="F"></li>
+          <li class="key black-key" data-key="F#"></li>
+          <li class="key white-key" data-key="G"></li>
+          <li class="key black-key" data-key="G#"></li>
+          <li class="key white-key" data-key="A"></li>
+          <li class="key black-key" data-key="A#"></li>
+          <li class="key white-key" data-key="B"></li>
+          <li class="key white-key" data-key="C2"></li>
+          <li class="key black-key" data-key="C#2"></li>
+          <li class="key white-key" data-key="D2"></li>
+          <li class="key black-key" data-key="D#2"></li>
+          <li class="key white-key" data-key="E2"></li>
+        </ul>
+        <div class="marca">
+          <h2>MusicCoder II</h2>
+        </div>
+      </section>
+    </main>
+    <footer>footer</footer>
+  </body>
+</html>
