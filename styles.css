@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: oxygen;
+  color: azure;
+}
+
+nav {
+  color: #000;
+  padding: 30px;
+}
+footer {
+  color: #000;
+  padding: 25px;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.wrapper {
+  padding: 20px 40px;
+  border-radius: 20px;
+  background: rgb(210, 38, 48);
+}
+/* distribucion lineal del encabezado  opcional, solo activar quitando esta.
+  .wrapper .encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }*/
+
+.piano .white-key {
+  box-shadow: 5px 5px 10px #fff inset, -5px -5px 10px #b2b2b2 inset;
+  cursor: url("img/piano (1).png"), auto;
+}
+
+.piano .black-key {
+  box-shadow: 5px 5px 10px #000000 inset, -5px -5px 10px #333 inset;
+  cursor: url("img/piano (1).png"), auto;
+}
+
+.piano {
+  display: flex;
+  list-style: none;
+  margin-top: 40px;
+}
+
+.piano .key {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  cursor: url("img/genres_44dp_EA3323_FILL0_wght400_GRAD0_opsz48.svg"), auto;
+}
+
+.piano .black-key {
+  z-index: 2;
+  width: 44px;
+  height: 140px;
+  margin: 0 -22px 0 -22px;
+  border-radius: 0 0 5px 5px;
+  background: #212121;
+}
+
+.piano .white-key {
+  height: 230px;
+  width: 70px;
+  border-radius: 4px;
+  border: 1px solid #000;
+  background: whitesmoke;
+}
+
+.button {
+  background-color: #e62828;
+  color: #ffffff;
+  width: 40px;
+  margin-top: 1px;
+  border-radius: 10px;
+  cursor: url("img/piano (1).png"), auto;
+}
+@media screen and (max-width: 851px) {
+  .wrapper {
+    padding: 25px;
+  }
+  .encabezado {
+    flex-direction: column;
+  }
+  .encabeza :where(h2, .column) {
+    margin-bottom: 13px;
+  }
+  .volume-slider .input {
+    max-width: 100px;
+  }
+  .piano {
+    margin-top: 20px;
+  }
+  .piano .key:nth-child(9),
+  .piano .key:nth-child(10) {
+    display: none;
+  }
+  .piano .black-key {
+    height: 70px;
+    width: 30px;
+    margin: 0 -20px 0 -20px;
+  }
+  .piano .white-key {
+    height: 100px;
+    width: 50px;
+  }
+}
+
+@media screen and (max-width: 616px) {
+  .piano .key:nth-child(13),
+  .piano .key:nth-child(14),
+  .piano .key:nth-child(15),
+  .piano .key:nth-child(16),
+  .piano .key:nth-child(17) {
+    display: none;
+  }
+  .piano .white-key {
+    width: 50px;
+  }
+}
+
+/*VOLUME-------------------------*/
+
+/* Estilo para el thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background: #d22630; /* Color del thumb */
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #d22630; /* Color del thumb */
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid #ffffff; /* Borde blanco para mejor visibilidad */
+}
+
+/* Estilo para el track (la barra) */
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 12px;
+  background: linear-gradient(to right, #d22630, #ddd); /* Color del track */
+  border-radius: 5px;
+}
+
+/* Estilo general para el input range */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  background: transparent; /* Elimina el fondo por defecto */
+  margin-top: 10px;
+}
+/*VOLUME--------------------------*/
+
+/*Icono de Volume*/
+.volume-slider {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  opacity: 0.8;
+}
+.IconoVol {
+  margin-top: 7px;
+  padding: 10px;
+}
+
+.marca {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  opacity: 0.8;
+}
